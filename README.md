@@ -10,25 +10,32 @@ Você pode acessar a aplicação web do Lumi por meio deste link: https://lumi-c
 
 ## Rodando localmente
 
-Clone o projeto
+#### Pré-requisitos
+
+Antes de iniciar o Lumi Server, certifique-se de ter instalado em seu ambiente:
+
+- **Node.js** (versão 14 ou superior)
+- **npm** (gerenciador de pacotes do Node.js) ou **yarn**
+
+#### Clone o projeto
 
 ```bash
   git clone https://github.com/matthmarinho/lumi-client.git
 ```
 
-Entre no diretório do projeto
+#### Entre no diretório do projeto
 
 ```bash
   cd lumi-client
 ```
 
-Instale as dependências
+#### Instale as dependências
 
 ```bash
   npm install
 ```
 
-Inicie o servidor
+#### Inicie o servidor
 
 ```bash
   npm run dev
