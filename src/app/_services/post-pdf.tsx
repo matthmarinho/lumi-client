@@ -4,8 +4,7 @@ import { revalidatePath } from "next/cache";
 
 export const postPdf = async (formData: FormData) => {
   try {
-    const response = await fetch('https://lumi-server.fly.dev/api/upload-pdf', {
-    // const response = await fetch('http://localhost:8000/api/upload-pdf', {
+    const response = await fetch(process.env.API_URL + '/api/upload-pdf', {
       method: 'POST',
       body: formData,
     });
