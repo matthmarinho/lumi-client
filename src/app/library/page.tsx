@@ -200,6 +200,7 @@ export default function Library() {
                 <TableRow>
                   <TableHead>Nome</TableHead>
                   <TableHead>Número</TableHead>
+                  <TableHead>Ano</TableHead>
                   {months.map((month: string) => (
                     <TableHead key={month} >{month}</TableHead>
                   ))}
@@ -207,9 +208,10 @@ export default function Library() {
               </TableHeader>
               <TableBody>
                 {filteredInvoices.map((invoice: EnergyInvoice) => (
-                  <TableRow key={invoice.customerNumber}>
+                  <TableRow key={`${invoice.customerNumber} + ${invoice.referenceYear}`}>
                     <TableCell className="font-medium">{invoice.customerName}</TableCell>
                     <TableCell>{invoice.customerNumber}</TableCell>
+                    <TableCell>{invoice.referenceYear}</TableCell>
                     {months.map((month) => {
                       const pdf = invoice.pdfFiles.find((pdf: {
                         referenceMonth: string;
